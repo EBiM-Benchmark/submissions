@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions? Join our Discord
+    url: https://discord.gg/pGwRbMRjuH
+    about: For help before submitting, ask in the EBiM community.
+  - name: Competition website & FAQ
+    url: https://ebim-benchmark.github.io/faq.html
+    about: Rules, timeline, and frequently asked questions.
