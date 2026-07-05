@@ -1,0 +1,75 @@
+name: Repository Submission
+description: Submit your team's work for the EBiM Competition.
+title: "[Submission] <your team name>"
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit your team's work by filling out this form. Your repository must be **public** and contain a
+        **Dockerfile** encapsulating your work and a **README** explaining how to run it. Source code is
+        **not** required. You may optionally link supplementary materials (e.g. Hugging Face model weights or
+        datasets) — if you do, include a clear integration guide in your README.
+
+        One issue per team. Submitting again (e.g. an updated repository) is allowed until the deadline —
+        open a new issue and note that it supersedes your earlier one.
+  - type: input
+    id: team_name
+    attributes:
+      label: Team name
+      description: Must match your registration exactly.
+    validations:
+      required: true
+  - type: input
+    id: poc_email
+    attributes:
+      label: Point-of-contact email
+      description: Must match the Member 1 (Point of Contact) email from your registration — we verify against the registration records.
+    validations:
+      required: true
+  - type: dropdown
+    id: task
+    attributes:
+      label: Task track
+      description: Which task is this submission for? Submit one issue per task if you compete in several.
+      options:
+        - "Task 1 — Cable Routing & Plugging"
+        - "Task 2 — Deformable Material Handling (Thermal Pad Placement)"
+        - "Task 3 — Assisted Living & Feeding"
+    validations:
+      required: true
+  - type: input
+    id: repo_url
+    attributes:
+      label: Public GitHub repository URL
+      placeholder: https://github.com/your-team/your-repo
+    validations:
+      required: true
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Submission requirements
+      options:
+        - label: The repository is public.
+          required: true
+        - label: It contains a Dockerfile encapsulating our work.
+          required: true
+        - label: It contains a README explaining how to run it.
+          required: true
+  - type: input
+    id: supplementary
+    attributes:
+      label: Optional supplementary links
+      description: e.g. Hugging Face model weights or datasets. If provided, your README must include a clear integration guide.
+      placeholder: https://huggingface.co/...
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I understand source code is not required, but a Dockerfile and a run README are.
+          required: true
