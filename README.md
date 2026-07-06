@@ -7,7 +7,7 @@ Teams submit by opening a **New Issue** using the *Repository Submission* form:
 
 ## Submission window
 
-Submissions open **when the simulation package is released** and close **Aug 31, 2026 (23:59 AoE)**.
+Submissions are **open now**. Because the developer preview shipped later than planned, the submission deadline will be extended; the revised deadline is announced on the [competition page](https://ebim-benchmark.github.io/competition.html) and in [Discord](https://discord.gg/pGwRbMRjuH).
 You may update your submission any time before the deadline by opening a new issue that supersedes the old one.
 
 ## What a submission must contain
