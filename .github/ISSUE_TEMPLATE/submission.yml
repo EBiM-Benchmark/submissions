@@ -6,25 +6,33 @@ body:
   - type: markdown
     attributes:
       value: |
-        Submit your team's work by filling out this form. Your repository must be **public** and contain a
-        **Dockerfile** encapsulating your work and a **README** explaining how to run it. Source code is
-        **not** required. You may optionally link supplementary materials (e.g. Hugging Face model weights or
-        datasets) — if you do, include a clear integration guide in your README.
+        Submit your team's work by filling out this form. Two things are called a submission here: the
+        **issue** you file with this form, and the **public repository** it links to. The form files the
+        issue; the repository holds the work.
 
-        One issue per team. Submitting again (e.g. an updated repository) is allowed until the deadline —
-        open a new issue and note that it supersedes your earlier one.
+        Your repository must be **public** and contain a **Dockerfile** encapsulating your work and a
+        **README** explaining how to run it. Source code is **not** required. You may optionally link
+        supplementary materials (e.g. Hugging Face model weights or datasets) — if you do, include a clear
+        integration guide in your README.
+
+        One issue per team, per task. If you are competing in two tasks, that is two issues, not one.
+        Submitting again (e.g. an updated repository) is allowed until the deadline — open a new issue and
+        note that it supersedes your earlier one.
+
+        If you have agreed a different team name or point-of-contact address with us since you registered,
+        file under the one we agreed and put your original registered name in the Notes field.
   - type: input
     id: team_name
     attributes:
       label: Team name
-      description: Must match your registration exactly.
+      description: Must match your registration, unless you have agreed a different name with us.
     validations:
       required: true
   - type: input
     id: poc_email
     attributes:
       label: Point-of-contact email
-      description: Must match the Member 1 (Point of Contact) email from your registration — we verify against the registration records.
+      description: Must match the Member 1 (Point of Contact) email from your registration, unless you have agreed a different address with us — we verify against the registration records.
     validations:
       required: true
   - type: dropdown

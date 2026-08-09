@@ -7,7 +7,7 @@ Teams submit by opening a **New Issue** using the *Repository Submission* form:
 
 ## Submission window
 
-Submissions are **open now**. The revised schedule is final: **Phase I — Simulation closes Aug 10, 2026 (AoE)** and **Phase II — Real-Robot Validation closes Sep 10, 2026 (AoE)**. Full schedule on the [competition page](https://ebim-benchmark.github.io/competition.html); questions in [Discord](https://discord.gg/pGwRbMRjuH).
+Submissions are **open now**. The revised schedule is final: **Phase I — Simulation closes Aug 15, 2026 (AoE)** and **Phase II — Real-Robot Validation closes Sep 12, 2026 (AoE)**. Full schedule on the [competition page](https://ebim-benchmark.github.io/competition.html); questions in [Discord](https://discord.gg/pGwRbMRjuH).
 You may update your submission any time before the deadline by opening a new issue that supersedes the old one.
 
 ## What a submission must contain
