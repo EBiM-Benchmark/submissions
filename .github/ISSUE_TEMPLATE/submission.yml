@@ -68,7 +68,7 @@ body:
     id: supplementary
     attributes:
       label: Optional supplementary links
-      description: e.g. Hugging Face model weights or datasets. If provided, your README must include a clear integration guide.
+      description: e.g. Hugging Face model weights or datasets. Links may point to private or access-controlled resources — a link here is not a publication. If your materials cannot be public, email organizers@ebim-benchmark.org before the deadline to arrange access instead of filling this field. If provided, your README must include a clear integration guide.
       placeholder: https://huggingface.co/...
   - type: textarea
     id: notes
