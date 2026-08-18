@@ -1,13 +1,14 @@
 # EBiM Competition — Submissions
 
 This repository collects **team submissions** for the [EBiM Competition](https://ebim-benchmark.github.io/).
-Teams submit by opening a **New Issue** using the *Repository Submission* form:
+Teams submit by opening a **New Issue** and choosing either the *Repository Submission* or the
+*Technical Report* form:
 
 **➡ [Submit your work](https://github.com/EBiM-Benchmark/submissions/issues/new/choose)**
 
 ## Submission window
 
-Submissions are **open now**. The revised schedule is final: **Phase I — Simulation closes Aug 15, 2026 (AoE)** and **Phase II — Real-Robot Validation closes Sep 12, 2026 (AoE)**. Full schedule on the [competition page](https://ebim-benchmark.github.io/competition.html); questions in [Discord](https://discord.gg/pGwRbMRjuH).
+Submissions are **open now**. The revised schedule: **Phase I — Simulation closes Aug 22, 2026 (AoE)** and **Phase II — Real-Robot Validation closes Sep 12, 2026 (AoE)**. Full schedule on the [competition page](https://ebim-benchmark.github.io/competition.html); questions in [Discord](https://discord.gg/pGwRbMRjuH).
 You may update your submission any time before the deadline by opening a new issue that supersedes the old one.
 
 ## What a submission must contain
@@ -20,9 +21,17 @@ Your submission is a link to a **public GitHub repository** that contains:
 **Source code is not required.** You may optionally link supplementary materials (e.g. Hugging Face model
 weights or datasets) — if you do, your README must include a clear integration guide.
 
+The form also asks whether your solution used the simulator's ground-truth object poses. Both answers are
+valid submissions; solving perception yourself carries a slightly higher scoring weight.
+
+Alternatively, teams with working technical progress but no deployable policy may file a **Technical Report**
+instead, using the *Technical Report* form on the same New Issue page. A Technical Report needs no Dockerfile
+and is assessed on technical maturity and readiness rather than on a runnable policy; it is weighted at 0.65
+of a policy submission's scale. You may choose either pathway, per task.
+
 ## How submissions are verified
 
-- One issue per team **per task track** (submit separate issues if you compete in multiple tracks).
+- One issue per team **per task** (submit separate issues if you compete in multiple tasks).
 - Each submission's **team name + point-of-contact email** are verified against the registration records.
   Unregistered submissions are not evaluated.
 - All real-robot bench testing and official evaluation are run by the organizers (see the
