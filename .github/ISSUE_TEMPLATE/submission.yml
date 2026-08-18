@@ -16,11 +16,24 @@ body:
         integration guide in your README.
 
         One issue per team, per task. If you are competing in two tasks, that is two issues, not one.
-        Submitting again (e.g. an updated repository) is allowed until the deadline — open a new issue and
+        Submitting again (e.g. an updated repository) is allowed until Aug 22, 2026 (AoE) — open a new issue and
         note that it supersedes your earlier one.
 
         If you have agreed a different team name or point-of-contact address with us since you registered,
         file under the one we agreed and put your original registered name in the Notes field.
+
+        Not ready to submit a deployable policy? Use the **Technical Report** form instead — go back to
+        [New issue](https://github.com/EBiM-Benchmark/submissions/issues/new/choose) and choose it. A report
+        that documents working software scores better than a policy that does not run.
+
+        The task metrics — what is measured, and how a run is scored — are defined in the
+        [Autonomous Robot Benchmark Rulebook 1.0](https://ebim-benchmark.github.io/docs/Autonomous_Robot_Benchmark_Rulebook_1.0.pdf).
+        The Rulebook labels the tasks **Track 1 / 2 / 3**: Track 1 is Task 1, Track 2 is Task 2, Track 3 is Task 3.
+        For Task 1, plugging is not evaluated — scoring covers cable routing only.
+
+        **Weighting is separate and is not in the Rulebook.** Your rubric score is multiplied by a weight
+        reflecting when you submitted and whether you used the simulator's ground-truth poses. See the
+        announcement email for the weights.
   - type: input
     id: team_name
     attributes:
@@ -38,8 +51,8 @@ body:
   - type: dropdown
     id: task
     attributes:
-      label: Task track
-      description: Which task is this submission for? Submit one issue per task if you compete in several.
+      label: Task
+      description: Which task is this submission for? File a separate issue for each task you compete in.
       options:
         - "Task 1 — Cable Routing & Plugging"
         - "Task 2 — Deformable Material Handling (Thermal Pad Placement)"
@@ -51,6 +64,21 @@ body:
     attributes:
       label: Public GitHub repository URL
       placeholder: https://github.com/your-team/your-repo
+    validations:
+      required: true
+  - type: dropdown
+    id: ground_truth
+    attributes:
+      label: Did this submission use the simulator's ground-truth object poses?
+      description: >
+        For Phase I you may use ground-truth object positions and states provided directly by the
+        simulator. Both answers are valid submissions. Solving perception yourself carries a slightly
+        higher scoring weight because it is closer to what Phase II requires. We take this answer in
+        good faith; a declaration that does not match the submitted code may lead to disqualification.
+      options:
+        - "No — our solution does its own perception"
+        - "Yes — we use the simulator's ground-truth object poses"
+        - "Partly — see Notes"
     validations:
       required: true
   - type: checkboxes
