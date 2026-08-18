@@ -1,6 +1,6 @@
 name: Technical Report Submission
 description: Submit a Technical Report — for teams with technical progress but no deployable policy yet.
-title: "[Report] <your team name>"
+title: "[Report] <your team name> — <task>"
 labels: ["technical-report"]
 body:
   - type: markdown
@@ -30,8 +30,8 @@ body:
         Task 3. For Task 1, plugging is not evaluated — scoring covers cable routing only.
 
         **Weighting is separate and is not in the Rulebook.** Your rubric score is multiplied by a weight
-        reflecting when you submitted and whether you used the simulator's ground-truth poses. Technical
-        Reports are weighted at 0.65 of a policy submission's scale — see the announcement email.
+        reflecting when you submitted. Technical Reports are weighted at 0.65 of a policy submission's
+        scale — see the announcement email.
 
   # --- SHARED FIELDS: identical in id, label, description and order to submission.yml.
   # --- Change one, change both, in the same commit.

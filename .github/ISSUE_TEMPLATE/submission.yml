@@ -1,6 +1,6 @@
 name: Repository Submission
 description: Submit your team's work for the EBiM Competition.
-title: "[Submission] <your team name>"
+title: "[Submission] <your team name> — <task>"
 labels: ["submission"]
 body:
   - type: markdown
