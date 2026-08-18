@@ -6,6 +6,6 @@ contact_links:
   - name: Competition website & FAQ
     url: https://ebim-benchmark.github.io/faq.html
     about: Rules, timeline, and frequently asked questions.
-  - name: Scoring rules (Autonomous Robot Benchmark Rulebook 1.0)
+  - name: Task metrics (Autonomous Robot Benchmark Rulebook 1.0)
     url: https://ebim-benchmark.github.io/docs/Autonomous_Robot_Benchmark_Rulebook_1.0.pdf
-    about: How policy submissions are scored.
+    about: What is measured for each task, and how a run is scored. Weighting is separate.

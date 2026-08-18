@@ -1,7 +1,8 @@
 # EBiM Competition — Submissions
 
 This repository collects **team submissions** for the [EBiM Competition](https://ebim-benchmark.github.io/).
-Teams submit by opening a **New Issue** using the *Repository Submission* form:
+Teams submit by opening a **New Issue** and choosing either the *Repository Submission* or the
+*Technical Report* form:
 
 **➡ [Submit your work](https://github.com/EBiM-Benchmark/submissions/issues/new/choose)**
 
@@ -19,6 +20,9 @@ Your submission is a link to a **public GitHub repository** that contains:
 
 **Source code is not required.** You may optionally link supplementary materials (e.g. Hugging Face model
 weights or datasets) — if you do, your README must include a clear integration guide.
+
+The form also asks whether your solution used the simulator's ground-truth object poses. Both answers are
+valid submissions; solving perception yourself carries a slightly higher scoring weight.
 
 Alternatively, teams with working technical progress but no deployable policy may file a **Technical Report**
 instead, using the *Technical Report* form on the same New Issue page. A Technical Report needs no Dockerfile
