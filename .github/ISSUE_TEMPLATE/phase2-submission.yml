@@ -1,0 +1,179 @@
+name: Phase II Policy Submission
+description: Submit your team's final runnable policy for Phase II of the EBiM Competition.
+title: "[Phase II] <your team name> — <task>"
+labels: ["phase-2"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to submit your team's **final runnable policy** for Phase II.
+
+        Every advancing team files this form for **every task it competes in**, whether or not your
+        team attended a hands-on session. File a separate issue for each task.
+
+        **Deadline: 12 September 2026, 23:59 AoE.**
+
+        Organizers run your policy on the real testbed. What you submit here is what we run: we
+        evaluate the exact commit you pin below and nothing else. If we cannot build and launch it
+        from these fields alone, we cannot score it.
+
+  - type: input
+    id: team_name
+    attributes:
+      label: Team name
+      description: Use the same team name as your registration. If your team has been renamed since Phase I, give the current name and mention the previous one in Notes.
+    validations:
+      required: true
+
+  - type: input
+    id: poc_email
+    attributes:
+      label: Point of Contact email
+      description: Must match the Member 1 (Point of Contact) email from your registration, unless you have agreed a different address with us. We verify against the registration records, and we identify your team by this address rather than by team name.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task
+    attributes:
+      label: Task
+      description: Which task is this submission for? File a separate issue for each task you compete in.
+      options:
+        - "Task 1 — Cable Routing & Plugging"
+        - "Task 2 — Deformable Material Handling (Thermal Pad Placement)"
+        - "Task 3 — Assisted Living & Feeding"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pathway
+    attributes:
+      label: Your assigned Phase II pathway for this task
+      description: The site we assigned you for this task, or Remote if you were not assigned a hands-on session. This is a cross-check only — assignments are not changed by what you enter here. If it does not match what you were told, select what you were told and say so in Notes. Remote teams are evaluated on the same testbeds as everyone else; only the hands-on session differs.
+      options:
+        - "Hamburg"
+        - "Munich / Augsburg"
+        - "Shanghai"
+        - "Remote — no hands-on session assigned"
+    validations:
+      required: true
+
+  - type: input
+    id: repo_url
+    attributes:
+      label: Public GitHub repository URL
+      placeholder: https://github.com/your-team/your-repo
+    validations:
+      required: true
+
+  - type: input
+    id: commit_sha
+    attributes:
+      label: Pinned commit SHA
+      description: The full 40-character commit SHA we will evaluate. It must be reachable from a branch or tag in the repository above, and must remain reachable after the deadline — do not force-push it away. We do not evaluate a branch name, because branch tips move.
+      placeholder: 15c9651877dbc98f699629a6855458aac6241787
+    validations:
+      required: true
+
+  - type: textarea
+    id: run_command
+    attributes:
+      label: Build and run commands
+      description: The exact commands an operator runs, starting from a clean checkout of the pinned commit, to build your image and launch your policy. Include the entrypoint. Assume the operator knows the testbed thoroughly and knows nothing about your code.
+      placeholder: |
+        docker build -t ourteam:phase2 .
+        docker run --rm --gpus all --network none ourteam:phase2 /app/run_task2.sh
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and dependencies
+      description: Base image, CUDA and driver versions, ROS distribution if any, and anything that must already be present on the host. State explicitly whether your container needs network access at run time; we assume it does not.
+    validations:
+      required: true
+
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware assumptions
+      description: GPU model and VRAM required, expected control or inference rate, and every assumption your policy makes about the cell — camera placement, initial arm pose, object starting positions, lighting, and what must be reset between rounds.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pose_source
+    attributes:
+      label: Does your policy rely on externally provided object poses?
+      description: >
+        The Phase I question about simulator ground truth does not apply on real hardware. The
+        equivalent question here is whether your policy is given object poses by anything other than
+        its own perception — motion capture, fiducial markers such as AprilTags, hard-coded or
+        pre-taught poses, or operator input during a run. We take this answer in good faith; a
+        declaration that does not match the submitted code may lead to disqualification.
+      options:
+        - "No — our policy does its own perception end to end"
+        - "Yes — fiducial markers (AprilTag or similar)"
+        - "Yes — motion capture or other external tracking"
+        - "Yes — hard-coded or pre-taught poses"
+        - "Partly — see Notes"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: trajectory_data
+    attributes:
+      label: Did you train on the organizer-released trajectory dataset?
+      description: Answer for this task only. Using the released trajectories is permitted and carries no penalty; we ask so that results can be compared fairly.
+      options:
+        - "No — we did not use trajectory data"
+        - "Yes — organizer-released trajectories only"
+        - "Yes — organizer-released trajectories plus our own collected data"
+        - "Our own collected data only"
+    validations:
+      required: true
+
+  - type: textarea
+    id: changes
+    attributes:
+      label: What changed since your Phase I submission? (optional)
+      description: A few lines is enough. This helps reviewers understand your approach and is not scored.
+
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Submission requirements
+      options:
+        - label: The repository is public and the pinned commit is reachable in it.
+          required: true
+        - label: It contains a Dockerfile that builds the image named in the run commands above.
+          required: true
+        - label: It contains a README explaining how to run the policy on the real testbed.
+          required: true
+        - label: We have run the commands above from a clean checkout of the pinned commit, and they work.
+          required: true
+
+  - type: input
+    id: supplementary
+    attributes:
+      label: Optional supplementary links
+      description: e.g. Hugging Face model weights. Links may point to private or access-controlled resources; a link here is not a publication. If your materials cannot be public, email organizers@ebim-benchmark.org before the deadline to arrange access. If access is not granted before evaluation, your submission is assessed on public materials only.
+      placeholder: https://huggingface.co/...
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)
+
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: We understand organizers evaluate the pinned commit exactly as submitted, and will not modify our code to make it build or run.
+          required: true
+        - label: We understand the operator has full authority to stop a run at any time, for safety or to protect the hardware.
+          required: true
+        - label: We understand that if organizers cannot build and launch our submission from the fields above, it cannot be scored.
+          required: true
