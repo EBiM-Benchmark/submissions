@@ -11,7 +11,9 @@ body:
         Every advancing team files this form for **every task it competes in**, whether or not your
         team attended a hands-on session. File a separate issue for each task.
 
-        **Deadline: 12 September 2026, 23:59 AoE.**
+        **Deadline.** Your team's deadline is the one stated in your Phase II advancement email.
+        Deadlines differ between teams, so please use the date we sent you rather than a date you
+        have heard from another team.
 
         Organizers run your policy on the real testbed. What you submit here is what we run: we
         evaluate the exact commit you pin below and nothing else. If we cannot build and launch it
@@ -70,7 +72,7 @@ body:
     id: commit_sha
     attributes:
       label: Pinned commit SHA
-      description: The full 40-character commit SHA we will evaluate. It must be reachable from a branch or tag in the repository above, and must remain reachable after the deadline — do not force-push it away. We do not evaluate a branch name, because branch tips move.
+      description: The full 40-character commit SHA we will evaluate. It must be reachable from a branch or tag in the repository above, and must remain reachable after your deadline — do not force-push it away. We do not evaluate a branch name, because branch tips move.
       placeholder: 15c9651877dbc98f699629a6855458aac6241787
     validations:
       required: true
@@ -158,7 +160,7 @@ body:
     id: supplementary
     attributes:
       label: Optional supplementary links
-      description: e.g. Hugging Face model weights. Links may point to private or access-controlled resources; a link here is not a publication. If your materials cannot be public, email organizers@ebim-benchmark.org before the deadline to arrange access. If access is not granted before evaluation, your submission is assessed on public materials only.
+      description: e.g. Hugging Face model weights. Links may point to private or access-controlled resources; a link here is not a publication. If your materials cannot be public, email organizers@ebim-benchmark.org before your deadline to arrange access. If access is not granted before evaluation, your submission is assessed on public materials only.
       placeholder: https://huggingface.co/...
 
   - type: textarea
